@@ -1,0 +1,574 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>What's For Dinner</title>
+  </head>
+  <body>
+    <!-- ! Navbar Section -->
+    <nav
+      class="navbar navbar-expand-lg shadow-sm p-3 mb-5 bg-white rounded fixed-top"
+    >
+      <div class="container-fluid">
+        <div class="d-flex justify-content-start align-items-start">
+          <div class="logo me-3 p-3">
+            <i class="fa-solid fa-utensils text-white fs-5"></i>
+          </div>
+
+          <div class="text-logo">
+            <h1 class="fs-4 fw-bold mb-1">What's For Dinner</h1>
+            <p class="mt-0">Your daily meal inspiration</p>
+          </div>
+        </div>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars fs-3"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item my-auto mx-1">
+              <button class="bg-white">
+                <i class="fa-solid fa-bookmark fs-5"></i>
+                <span>Saved Recipes</span>
+              </button>
+            </li>
+            <li class="nav-item my-auto mx-1">
+              <button class="bg-white">
+                <i class="fa-solid fa-clock-rotate-left fs-5"></i>
+                <span>Recent</span>
+              </button>
+            </li>
+            <li class="nav-item my-auto mx-1">
+              <button class="bg-white">
+                <i class="fa-solid fa-gear fs-5"></i>
+                <span>Settings</span>
+              </button>
+            </li>
+            <li class="nav-item my-auto mx-1">
+              <button class="bg-white">
+                <img class="" src="./images/imgi_1_avatar-4.jpg" alt="person" />
+                <span>Profile</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!--! Home Section  -->
+    <div class="home p-4">
+      <div class="container-fluid">
+        <!-- //////////////////////^Left Side (image)/////////////////// -->
+        <div class="row bg-white rounded-5">
+          <div class="col-xl-5 ps-0">
+            <div class="dish-image h-100 position-relative">
+              <div>
+                <div
+                  class="position-absolute top-0 start-0 ms-4 mt-4 bg-white rounded-5 px-3 py-2 shadow"
+                >
+                  <i class="fa-solid fa-star text-warning me-1"></i>
+                  <span id="  ratingsAverage" class="fw-bold me-1">4.8</span>
+                  <span id=" ratingsQunatity" class="reviews"
+                    >(445 reviews)</span
+                  >
+                </div>
+              </div>
+
+              <div>
+                <img
+                  id="image"
+                  class="object-fit-cover"
+                  src="./images/meal-1.avif"
+                  alt="dish"
+                />
+              </div>
+              <div class="">
+                <div
+                  class="badge d-flex justify-content-center align-items-center bg-white rounded-4 position-absolute pt-2"
+                >
+                  <div
+                    class="mx-auto my-3 d-flex justify-content-center align-items-center flex-column"
+                  >
+                    <i class="clock fa-solid fa-clock fs-5 mb-1"></i>
+                    <p class="title text-p mb-1">Prep Time</p>
+                    <p id="prepTime" class="paragraph mt-0 text-black">
+                      20 min
+                    </p>
+                  </div>
+                  <div
+                    class="mx-auto my-3 d-flex justify-content-center align-items-center flex-column"
+                  >
+                    <i
+                      class="fa-solid fa-fire-burner fs-5 text-danger mb-1"
+                    ></i>
+                    <p class="title text-p mb-1">Cook Time</p>
+                    <p id="cookingTime" class="paragraph mt-0 text-black">
+                      15 min
+                    </p>
+                  </div>
+                  <div
+                    class="mx-auto my-3 d-flex justify-content-center align-items-center flex-column"
+                  >
+                    <i class="fa-solid fa-users fs-5 text-primary mb-1"></i>
+                    <p class="title text-p mb-1">Servings</p>
+                    <p id="servings" class="paragraph mt-0 text-black">
+                      2 people
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- //////////////////////^Right Side (info)/////////////////// -->
+          <div class="col-xl-7 info overflow-y-auto">
+            <div class="right-content py-4">
+              <div class="d-flex justify-content-between align-items-center">
+                <div>
+                  <div>
+                    <span
+                      id="level"
+                      class="level text-success px-3 py-1 me-2 rounded-4"
+                    >
+                      Intermediate</span
+                    >
+                    <span
+                      id="category"
+                      class="country text-primary px-3 py-1 rounded-4"
+                      >Asian</span
+                    >
+                  </div>
+                  <div>
+                    <h3 id="mealName" class="fw-bold fs-2 mt-3">Pad Thai</h3>
+                    <p id="description" class="fs-5 text-p">
+                      Popular Thai stir-fried noodles with shrimp and peanuts
+                    </p>
+                  </div>
+                </div>
+                <div class="btns pe-3">
+                  <button class="text-sec border-0 p-3">
+                    <i class="fa-solid fa-bookmark"></i>
+                  </button>
+                  <button class="text-sec border-0 p-3">
+                    <i class="fa-solid fa-share-nodes"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="alert bg-main d-flex justify-content-start rounded-3">
+                <i
+                  class="fa-solid fa-triangle-exclamation text-danger fs-4 my-auto me-3"
+                ></i>
+                <div class="my-auto">
+                  <p class="head-title text-danger fw-bold mb-1">
+                    Extended Preparation Time
+                  </p>
+                  <p class="subtitle mt-0">
+                    This recipe requires more than 45 minutes to prepare. Plan
+                    accordingly!
+                  </p>
+                </div>
+              </div>
+              <ul
+                class="nav nav-tabs justify-content-center py-3 fw-bold"
+                id="myTab"
+                role="tablist"
+              >
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="tab active"
+                    id="ingredients-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#ingredients-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="ingredients-tab-pane"
+                    aria-selected="true"
+                  >
+                    <i class="fa-solid fa-list-check"></i>
+                    <span class="">Ingredients</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="tab"
+                    id="instructions-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#instructions-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="instructions-tab-pane"
+                    aria-selected="false"
+                  >
+                    <i class="fa-solid fa-book-open"></i>
+                    <span class="">Instructions</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="tab"
+                    id="nutrition-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#nutrition-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="nutrition-tab-pane"
+                    aria-selected="false"
+                  >
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span class="">Nutrition</span>
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="tab"
+                    id="tips-tab"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tips-tab-pane"
+                    type="button"
+                    role="tab"
+                    aria-controls="tips-tab-pane"
+                    aria-selected="false"
+                  >
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <span class="">Chef's Tips</span>
+                  </button>
+                </li>
+              </ul>
+              <div class="tab-content rounded-4 p-2 mt-3" id="myTabContent">
+                <div
+                  class="tab-pane fade show active"
+                  id="ingredients-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="ingredients-tab"
+                  tabindex="0"
+                >
+                  <div>
+                    <div>
+                      <ul
+                        id="ingredients"
+                        class="ingredients bg-main py-2 rounded-5"
+                      >
+                        <li
+                          class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                        >
+                          <div class="point text-white w-fit px-2 me-3">1</div>
+                          <span>200g rice noodles</span>
+                        </li>
+                        <li
+                          class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                        >
+                          <div class="point text-white w-fit px-2 me-3">2</div>
+                          <span>200g shrimp, peeled</span>
+                        </li>
+                        <li
+                          class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                        >
+                          <div class="point text-white w-fit px-2 me-3">3</div>
+                          <span>2 eggs</span>
+                        </li>
+                        <li
+                          class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                        >
+                          <div class="point text-white w-fit px-2 me-3">4</div>
+                          <span>3 tablespoons tamarind paste</span>
+                        </li>
+                        <li
+                          class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                        >
+                          <div class="point text-white w-fit px-2 me-3">5</div>
+                          <span>2 tablespoons fish sauce</span>
+                        </li>
+                        <li
+                          class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                        >
+                          <div class="point text-white w-fit px-2 me-3">6</div>
+                          <span>1 tablespoon palm sugar</span>
+                        </li>
+                        <li
+                          class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                        >
+                          <div class="point text-white w-fit px-2 me-3">7</div>
+                          <span>Bean sprouts</span>
+                        </li>
+                        <li
+                          class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                        >
+                          <div class="point text-white w-fit px-2 me-3">8</div>
+                          <span>Crushed peanuts</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="instructions-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="instructions-tab"
+                  tabindex="0"
+                >
+                  <ul id="instructions" class="instructions">
+                    <li
+                      class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                    >
+                      <div
+                        class="instruct text-white w-fit px-2 me-3 fw-bold py-2 px-3 fs-5"
+                      >
+                        1
+                      </div>
+                      <p class="my-auto">
+                        Soak rice noodles in warm water for 30 minutes. Drain
+                        and set aside.
+                      </p>
+                    </li>
+                    <li
+                      class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                    >
+                      <div
+                        class="instruct text-white w-fit px-2 me-3 fw-bold py-2 px-3 fs-5"
+                      >
+                        2
+                      </div>
+                      <p class="my-auto">
+                        Mix tamarind paste, fish sauce, and palm sugar to make
+                        the sauce.
+                      </p>
+                    </li>
+                    <li
+                      class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                    >
+                      <div
+                        class="instruct text-white w-fit px-2 me-3 fw-bold py-2 px-3 fs-5"
+                      >
+                        3
+                      </div>
+                      <p class="my-auto">
+                        Heat wok over high heat. Scramble eggs and set aside.
+                      </p>
+                    </li>
+                    <li
+                      class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                    >
+                      <div
+                        class="instruct text-white w-fit px-2 me-3 fw-bold py-2 px-3 fs-5"
+                      >
+                        4
+                      </div>
+                      <p class="my-auto">
+                        Cook shrimp until pink. Add noodles and sauce, toss for
+                        2-3 minutes.
+                      </p>
+                    </li>
+                    <li
+                      class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                    >
+                      <div
+                        class="instruct text-white w-fit px-2 me-3 fw-bold py-2 px-3 fs-5"
+                      >
+                        5
+                      </div>
+                      <p class="my-auto">
+                        Add scrambled eggs and bean sprouts. Toss everything
+                        together.
+                      </p>
+                    </li>
+                    <li
+                      class="d-flex justify-content-start align-items-start list-unstyled my-3"
+                    >
+                      <div
+                        class="instruct text-white w-fit px-2 me-3 fw-bold py-2 px-3 fs-5"
+                      >
+                        6
+                      </div>
+                      <p class="my-auto">
+                        Serve topped with crushed peanuts, lime wedges, and
+                        cilantro.
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="nutrition-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="nutrition-tab"
+                  tabindex="0"
+                >
+                  <div id="nutrition" class="row g-3">
+                    <div class="col-md-6">
+                      <div
+                        class="column d-flex justify-content-between align-item-start p-3 rounded-4"
+                      >
+                        <div
+                          class="iconic-1 d-flex justify-content-start align-items-start"
+                        >
+                          <span class="p-2 me-3 rounded-3">
+                            <i class="fa-solid fa-fire text-sec"></i>
+                          </span>
+                          <p class="my-auto">Calories</p>
+                        </div>
+                        <p class="my-auto fs-5 fw-bold">540 kcal</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div
+                        class="column d-flex justify-content-between align-item-start p-3 rounded-4"
+                      >
+                        <div
+                          class="iconic-2 d-flex justify-content-start align-items-start"
+                        >
+                          <span class="p-2 me-3 rounded-3">
+                            <i class="fa-solid fa-dumbbell text-primary"></i>
+                          </span>
+                          <p class="my-auto">Protein</p>
+                        </div>
+                        <p class="my-auto fs-5 fw-bold">32g</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div
+                        class="column d-flex justify-content-between align-item-start p-3 rounded-4"
+                      >
+                        <div
+                          class="iconic-3 d-flex justify-content-start align-items-start"
+                        >
+                          <span class="p-2 me-3 rounded-3">
+                            <i class="fa-solid fa-wheat-awn text-warning"></i>
+                          </span>
+                          <p class="my-auto">Carbohydrates</p>
+                        </div>
+                        <p class="my-auto fs-5 fw-bold">62g</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div
+                        class="column d-flex justify-content-between align-item-start p-3 rounded-4"
+                      >
+                        <div
+                          class="iconic-4 d-flex justify-content-start align-items-start"
+                        >
+                          <span class="p-2 me-3 rounded-3">
+                            <i class="fa-solid fa-droplet text-danger"></i>
+                          </span>
+                          <p class="my-auto">Fat</p>
+                        </div>
+                        <p class="my-auto fs-5 fw-bold">16g</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div
+                        class="column d-flex justify-content-between align-item-start p-3 rounded-4"
+                      >
+                        <div
+                          class="iconic-5 d-flex justify-content-start align-items-start"
+                        >
+                          <span class="p-2 me-3 rounded-3">
+                            <i class="fa-solid fa-seedling text-success"></i>
+                          </span>
+                          <p class="my-auto">Fiber</p>
+                        </div>
+                        <p class="my-auto fs-5 fw-bold">4g</p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div
+                        class="column d-flex justify-content-between align-item-start p-3 rounded-4"
+                      >
+                        <div
+                          class="iconic-6 d-flex justify-content-start align-items-start"
+                        >
+                          <span class="p-2 me-3 rounded-3">
+                            <i class="fa-solid fa-cube"></i>
+                          </span>
+                          <p class="my-auto">Sodium</p>
+                        </div>
+                        <p class="my-auto fs-5 fw-bold">1120mg</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="tips-tab-pane"
+                  role="tabpanel"
+                  aria-labelledby="tips-tab"
+                  tabindex="0"
+                >
+                  <div id="tips">
+                    <div
+                      class="border-start border-4 border-warning bg-main d-flex justify-content-start p-4 rounded-3 mb-3"
+                    >
+                      <i
+                        class="fa-solid fa-circle-check text-sec fs-5 my-auto me-3"
+                      ></i>
+                      <p class="my-auto">
+                        Don't oversoak noodles or they'll be mushy
+                      </p>
+                    </div>
+                    <div
+                      class="border-start border-4 border-warning bg-main d-flex justify-content-start p-4 rounded-3 mb-3"
+                    >
+                      <i
+                        class="fa-solid fa-circle-check text-sec fs-5 my-auto me-3"
+                      ></i>
+                      <p class="my-auto">
+                        Cook on high heat for authentic wok flavor
+                      </p>
+                    </div>
+                    <div
+                      class="border-start border-4 border-warning bg-main d-flex justify-content-start p-4 rounded-3 mb-3"
+                    >
+                      <i
+                        class="fa-solid fa-circle-check text-sec fs-5 my-auto me-3"
+                      ></i>
+                      <p class="my-auto">
+                        Balance sweet, sour, and salty flavors
+                      </p>
+                    </div>
+                    <div
+                      class="border-start border-4 border-warning bg-main d-flex justify-content-start p-4 rounded-3 mb-5"
+                    >
+                      <i
+                        class="fa-solid fa-circle-check text-sec fs-5 my-auto me-3"
+                      ></i>
+                      <p class="my-auto">
+                        Prepare all ingredients before starting to cook
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="text-secondary" />
+              <button
+                onclick="generate()"
+                type="button"
+                class="recipe text-light border-0 px-4 py-3 rounded-4 fw-bold mb-3"
+              >
+                <i class="fa-solid fa-rotate text-light"></i> Try Another Recipe
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
